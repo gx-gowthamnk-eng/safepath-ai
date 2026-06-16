@@ -1,0 +1,205 @@
+{
+  "users": [
+    {
+      "id": "a0e829c6-a320-4b2a-a9a3-a7b2bc2c8e31",
+      "email": "admin@safepath.ai",
+      "password_hash": "$2b$10$wK1F5N8/rP/VqU.Jq34hIe0UqL4G5x6v/r5l.9G8f6m7t5r9t5o3a",
+      "name": "SafePath Admin",
+      "phone": "+15550199",
+      "role": "admin",
+      "mode": "standard",
+      "language_pref": "en",
+      "emergency_pin": "1234",
+      "created_at": "2026-06-16T19:41:30.596Z"
+    },
+    {
+      "id": "c3f912d8-b210-4c3b-b9b4-b8b3bc3c9f42",
+      "email": "citizen@safepath.ai",
+      "password_hash": "$2b$10$wK1F5N8/rP/VqU.Jq34hIe0UqL4G5x6v/r5l.9G8f6m7t5r9t5o3a",
+      "name": "Anjali Devi",
+      "phone": "+15550188",
+      "role": "user",
+      "mode": "standard",
+      "language_pref": "ta",
+      "emergency_pin": "1234",
+      "created_at": "2026-06-16T19:41:30.597Z"
+    },
+    {
+      "id": "6f42vi78c76",
+      "email": "gowthamank1305x@gmail.com",
+      "password_hash": "$2a$10$824uN5yKW79V8PNbq35.WOmj7HbvHSQExwG2c8OUh3GJblj7uKNYW",
+      "name": "gowthaman K",
+      "phone": "8939776687",
+      "role": "user",
+      "mode": "standard",
+      "language_pref": "en",
+      "emergency_pin": "1234",
+      "created_at": "2026-06-16T20:09:20.152Z"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "c7c2b3e8-8b9a-4c28-98e3-54817a02c3b2",
+      "user_id": "c3f912d8-b210-4c3b-b9b4-b8b3bc3c9f42",
+      "name": "Ravi (Father)",
+      "phone": "+15550111",
+      "relationship": "Father",
+      "priority": "family",
+      "created_at": "2026-06-16T19:41:30.597Z"
+    },
+    {
+      "id": "c7c2b3e8-8b9a-4c28-98e3-54817a02c3b3",
+      "user_id": "c3f912d8-b210-4c3b-b9b4-b8b3bc3c9f42",
+      "name": "Meera (Mother)",
+      "phone": "+15550122",
+      "relationship": "Mother",
+      "priority": "family",
+      "created_at": "2026-06-16T19:41:30.597Z"
+    },
+    {
+      "id": "d2v0tyhen9a",
+      "user_id": "6f42vi78c76",
+      "name": "gowthaman K",
+      "phone": "8939776687",
+      "relationship": "brother",
+      "priority": "friend",
+      "created_at": "2026-06-16T20:11:27.740Z"
+    },
+    {
+      "id": "ulxsa9dcvb",
+      "user_id": "6f42vi78c76",
+      "name": "harini",
+      "phone": "8148762674",
+      "relationship": "sister",
+      "priority": "family",
+      "created_at": "2026-06-16T21:17:43.059Z"
+    }
+  ],
+  "trips": [
+    {
+      "id": "y7omkf3ft3o",
+      "user_id": "6f42vi78c76",
+      "origin_address": "Current Location",
+      "destination_address": "Destination",
+      "origin_lat": 30.307859,
+      "origin_lng": 120.326885,
+      "destination_lat": 30.323859,
+      "destination_lng": 120.344885,
+      "current_lat": 30.307859,
+      "current_lng": 120.326885,
+      "battery_percent": 100,
+      "safety_status": "safe",
+      "status": "active",
+      "start_time": "2026-06-16T20:40:29.886Z"
+    }
+  ],
+  "deviations": [],
+  "reports": [
+    {
+      "id": "r1",
+      "user_id": "c3f912d8-b210-4c3b-b9b4-b8b3bc3c9f42",
+      "category": "dark_street",
+      "description": "Streetlights broken for 2 weeks. Very dark and isolated.",
+      "latitude": 13.0827,
+      "longitude": 80.2707,
+      "safety_rating": 2,
+      "created_at": "2026-06-16T19:41:30.597Z"
+    },
+    {
+      "id": "r2",
+      "user_id": "c3f912d8-b210-4c3b-b9b4-b8b3bc3c9f42",
+      "category": "harassment",
+      "description": "Repeated catcalling near the bus stop in the evenings.",
+      "latitude": 13.0602,
+      "longitude": 80.2462,
+      "safety_rating": 1,
+      "created_at": "2026-06-16T19:41:30.597Z"
+    }
+  ],
+  "sos_events": [
+    {
+      "id": "7qkvrtwnww5",
+      "user_id": "6f42vi78c76",
+      "trip_id": null,
+      "latitude": 12.897402534166057,
+      "longitude": 80.14230671197649,
+      "status": "active",
+      "audio_url": "/uploads/evidence_1781640593492_usr1vl.webm",
+      "video_url": "",
+      "screenshot_url": "",
+      "created_at": "2026-06-16T20:09:53.556Z"
+    },
+    {
+      "id": "co70rhs9ll",
+      "user_id": "6f42vi78c76",
+      "trip_id": null,
+      "latitude": 12.897402534166057,
+      "longitude": 80.14230671197649,
+      "status": "active",
+      "audio_url": "/uploads/evidence_1781640622186_zw06d8.webm",
+      "video_url": "",
+      "screenshot_url": "",
+      "created_at": "2026-06-16T20:10:22.230Z"
+    },
+    {
+      "id": "u0gl6jxkg2",
+      "user_id": "6f42vi78c76",
+      "trip_id": null,
+      "latitude": 13.1112,
+      "longitude": 80.2045,
+      "status": "active",
+      "audio_url": "/uploads/evidence_1781644015972_u6heuf.webm",
+      "video_url": "",
+      "screenshot_url": "",
+      "created_at": "2026-06-16T21:06:56.038Z"
+    },
+    {
+      "id": "i9f9ciovo2f",
+      "user_id": "6f42vi78c76",
+      "trip_id": null,
+      "latitude": 30.307859,
+      "longitude": 120.326885,
+      "status": "active",
+      "audio_url": "/uploads/evidence_1781644368656_f53i5.webm",
+      "video_url": "",
+      "screenshot_url": "",
+      "created_at": "2026-06-16T21:12:48.684Z"
+    },
+    {
+      "id": "i76h1snm8n",
+      "user_id": "6f42vi78c76",
+      "trip_id": null,
+      "latitude": 13.1112,
+      "longitude": 80.2045,
+      "status": "active",
+      "audio_url": "/uploads/ev_1781645887509.webm",
+      "video_url": "",
+      "screenshot_url": "",
+      "created_at": "2026-06-16T21:38:07.546Z"
+    },
+    {
+      "id": "ndxk9wpm9zg",
+      "user_id": "6f42vi78c76",
+      "trip_id": null,
+      "latitude": 30.307859,
+      "longitude": 120.326885,
+      "status": "active",
+      "audio_url": "/uploads/ev_1781647616402.webm",
+      "video_url": "",
+      "screenshot_url": "",
+      "created_at": "2026-06-16T22:06:56.447Z"
+    },
+    {
+      "id": "w55lee5k5am",
+      "user_id": "6f42vi78c76",
+      "trip_id": null,
+      "latitude": 19.075984,
+      "longitude": 72.877656,
+      "status": "active",
+      "audio_url": "/uploads/ev_1781649518409.webm",
+      "video_url": "",
+      "screenshot_url": "",
+      "created_at": "2026-06-16T22:38:38.454Z"
+    }
+  ]
+}
