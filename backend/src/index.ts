@@ -70,9 +70,13 @@ app.get('/api/admin/metrics', authenticateToken as any, requireAdmin as any, asy
 });
 
 // Boot Server
-app.listen(PORT, () => {
-  console.log(`========================================`);
-  console.log(`🚀 SafePath AI Backend started on port ${PORT}`);
-  console.log(`👉 API Health endpoint: http://localhost:${PORT}/health`);
-  console.log(`========================================`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`========================================`);
+    console.log(`🚀 SafePath AI Backend started on port ${PORT}`);
+    console.log(`👉 API Health endpoint: http://localhost:${PORT}/health`);
+    console.log(`========================================`);
+  });
+}
+
+export default app;
