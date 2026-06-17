@@ -37,7 +37,7 @@ const broadcastSOS = async (
   screenshotUrl?: string
 ) => {
   const mapsLink = `https://maps.google.com/?q=${latitude},${longitude}`;
-  const backendBase = process.env.BACKEND_PUBLIC_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://safepath-backend-zeta.vercel.app');
+  const backendBase = process.env.BACKEND_PUBLIC_URL || 'https://safepath-backend-zeta.vercel.app';
 
   // For Twilio SMS, use .mp4 to ensure playback on mobile browsers instead of .webm
   const evidencePath = (videoUrl || audioUrl || screenshotUrl || '').replace('.webm', '.mp4');
