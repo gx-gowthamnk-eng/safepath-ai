@@ -335,9 +335,14 @@ export const sosApi = {
         status: 'active',
         created_at: new Date().toISOString(),
         ...data
+      },
+      broadcast: {
+        contacts_notified: 0,
+        results: [],
+        google_maps_link: `https://maps.google.com/?q=${data.latitude},${data.longitude}`
       }
     });
-    return res.sos;
+    return res;
   },
 
   getAll: async () => {
