@@ -28,7 +28,7 @@ const defaultSchema: DatabaseSchema = {
     {
       id: 'a0e829c6-a320-4b2a-a9a3-a7b2bc2c8e31',
       email: 'admin@safepath.ai',
-      password_hash: '$2b$10$wK1F5N8/rP/VqU.Jq34hIe0UqL4G5x6v/r5l.9G8f6m7t5r9t5o3a', // pass: 123456
+      password_hash: '$2a$10$JmS1LWF2QXbQ2qXueBEgOuPI6ayKVkNGqMzEbaiZupLkUPm.65RCq', // pass: password
       name: 'SafePath Admin',
       phone: '+15550199',
       role: 'admin',
@@ -40,7 +40,7 @@ const defaultSchema: DatabaseSchema = {
     {
       id: 'c3f912d8-b210-4c3b-b9b4-b8b3bc3c9f42',
       email: 'citizen@safepath.ai',
-      password_hash: '$2b$10$wK1F5N8/rP/VqU.Jq34hIe0UqL4G5x6v/r5l.9G8f6m7t5r9t5o3a', // pass: 123456
+      password_hash: '$2a$10$JmS1LWF2QXbQ2qXueBEgOuPI6ayKVkNGqMzEbaiZupLkUPm.65RCq', // pass: password
       name: 'Anjali Devi',
       phone: '+15550188',
       role: 'user',

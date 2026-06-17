@@ -88,21 +88,10 @@ export const authApi = {
   },
 
   login: async (data: { email: string; password: string }) => {
+    // No mock fallback for login — must authenticate against real backend
     const res = await request(`${BACKEND_URL}/auth/login`, {
       method: 'POST',
       body: JSON.stringify(data),
-    }, {
-      token: 'mock_token_' + Date.now(),
-      user: {
-        id: 'mock_user_id',
-        email: data.email,
-        name: data.email === 'admin@safepath.ai' ? 'SafePath Admin' : 'Anjali Devi',
-        phone: '+15550188',
-        role: data.email === 'admin@safepath.ai' ? 'admin' : 'user',
-        mode: 'standard',
-        language_pref: data.email === 'admin@safepath.ai' ? 'en' : 'ta',
-        emergency_pin: '1234'
-      }
     });
     if (res.token) setToken(res.token);
     return res;
@@ -157,13 +146,7 @@ export const contactsApi = {
   getAll: async () => {
     const res = await request(`${BACKEND_URL}/contacts`, {
       method: 'GET',
-    }, {
-      contacts: [
-        { id: '1', name: 'Ravi (Father)', phone: '+15550111', relationship: 'Father', priority: 'family' },
-        { id: '2', name: 'Meera (Mother)', phone: '+15550122', relationship: 'Mother', priority: 'family' },
-        { id: '3', name: 'Selvam (Friend)', phone: '+15550133', relationship: 'Friend', priority: 'friend' }
-      ]
-    });
+    }, { contacts: [] });
     return res.contacts;
   },
 
