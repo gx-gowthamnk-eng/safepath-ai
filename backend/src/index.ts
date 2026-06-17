@@ -45,14 +45,13 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// DB Debug (verify DATABASE_URL is set and Supabase is reachable)
+// DB Debug (verify Supabase connection)
 app.get('/debug/db', async (req, res) => {
-  const hasUrl = !!process.env.DATABASE_URL;
   try {
     const result = await query('SELECT COUNT(*) FROM users');
-    res.json({ connected: true, has_url: hasUrl, user_count: result.rows[0].count });
+    res.json({ connected: true, has_key: !!process.env.SUPABASE_SERVICE_KEY, user_count: result.rows[0].count });
   } catch (err: any) {
-    res.status(500).json({ connected: false, has_url: hasUrl, error: err.message });
+    res.status(500).json({ connected: false, has_key: !!process.env.SUPABASE_SERVICE_KEY, error: err.message });
   }
 });
 
