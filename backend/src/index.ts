@@ -45,6 +45,17 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
+// DB Debug (verify DATABASE_URL is set and Supabase is reachable)
+app.get('/debug/db', async (req, res) => {
+  const hasUrl = !!process.env.DATABASE_URL;
+  try {
+    const result = await query('SELECT COUNT(*) FROM users');
+    res.json({ connected: true, has_url: hasUrl, user_count: result.rows[0].count });
+  } catch (err: any) {
+    res.status(500).json({ connected: false, has_url: hasUrl, error: err.message });
+  }
+});
+
 // Admin Metrics API (RBAC-protected)
 app.get('/api/admin/metrics', authenticateToken as any, requireAdmin as any, async (req: AuthRequest, res) => {
   try {
