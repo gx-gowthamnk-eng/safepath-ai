@@ -37,10 +37,10 @@ const broadcastSOS = async (
   screenshotUrl?: string
 ) => {
   const mapsLink = `https://maps.google.com/?q=${latitude},${longitude}`;
-  const backendBase = process.env.BACKEND_PUBLIC_URL || `http://localhost:${process.env.PORT || 5000}`;
+  const backendBase = process.env.BACKEND_PUBLIC_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://safepath-backend-zeta.vercel.app');
 
-  // Choose the primary evidence link to keep message size within 160 characters (1 segment) for Twilio Trial Accounts
-  const evidencePath = videoUrl || audioUrl || screenshotUrl || '';
+  // For Twilio SMS, use .mp4 to ensure playback on mobile browsers instead of .webm
+  const evidencePath = (videoUrl || audioUrl || screenshotUrl || '').replace('.webm', '.mp4');
   const evidenceLink = evidencePath ? `${backendBase}${evidencePath}` : '';
 
   // Clean, ASCII only, single-segment format (no emojis or non-GSM-7 characters to prevent dropping to 70-character limit)

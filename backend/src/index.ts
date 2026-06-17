@@ -31,7 +31,13 @@ if (!fs.existsSync(uploadsDir)) {
 }
 
 // Serve uploaded evidence files statically
-app.use('/uploads', express.static(uploadsDir));
+app.use('/uploads', (req, res, next) => {
+  // If requesting a mock evidence file, always serve the demo video
+  if (req.path.startsWith('/mock_evidence_')) {
+    return res.sendFile(path.join(uploadsDir, 'demo.mp4'));
+  }
+  next();
+}, express.static(uploadsDir));
 
 // Route Mounts
 app.use('/api/auth', authRouter);
